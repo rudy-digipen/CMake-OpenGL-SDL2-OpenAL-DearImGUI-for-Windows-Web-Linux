@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNjggNjgiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCB4bGluazpocmVmPSIjYSIgaWQ9ImIiIGN4PSIzMy44IiBjeT0iMzMuOSIgcj0iMzQuNSIgZng9IjMzLjgiIGZ5PSIzMy45IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIvPjxsaW5lYXJHcmFkaWVudCBpZD0iYSI+PHN0b3Agb2Zmc2V0PSIuOCIgc3RvcC1jb2xvcj0iI2RmYTJlNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2EyYThlNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIHN0cm9rZT0iIzYxMjc2MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBwYWludC1vcmRlcj0ibWFya2VycyBmaWxsIHN0cm9rZSI+PHJlY3Qgd2lkdGg9IjY3LjMiIGhlaWdodD0iNjcuMyIgZmlsbD0idXJsKCNiKSIgc3Ryb2tlLXdpZHRoPSIxLjYiIHJ4PSI3LjciIHJ5PSIxMC4zIi8+PHRleHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMTEiIHk9IjQ0IiBmaWxsPSIjZTZlN2EyIiBzdHJva2Utd2lkdGg9Ii4zIiBmb250LWZhbWlseT0iUGFyY2htZW50IiBmb250LXNpemU9IjYwLjIiIHN0eWxlPSJsaW5lLWhlaWdodDowOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246UGFyY2htZW50Ij48dHNwYW4geD0iMTEiIHk9IjQ0Ij5SPC90c3Bhbj48L3RleHQ+PC9nPjwvc3ZnPg==" />
+    <title>DigiPen Programming Fun</title>
+    <meta name="description" content="Computer Programming Fun for DigiPen classes">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <style>
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            margin: 0;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgNjggNjgiPjxkZWZzPjxyYWRpYWxHcmFkaWVudCB4bGluazpocmVmPSIjYSIgaWQ9ImIiIGN4PSIzMy44IiBjeT0iMzMuOSIgcj0iMzQuNSIgZng9IjMzLjgiIGZ5PSIzMy45IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIvPjxsaW5lYXJHcmFkaWVudCBpZD0iYSI+PHN0b3Agb2Zmc2V0PSIuOCIgc3RvcC1jb2xvcj0iI2RmYTJlNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2EyYThlNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIHN0cm9rZT0iIzYxMjc2MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBwYWludC1vcmRlcj0ibWFya2VycyBmaWxsIHN0cm9rZSI+PHJlY3Qgd2lkdGg9IjY3LjMiIGhlaWdodD0iNjcuMyIgZmlsbD0idXJsKCNiKSIgc3Ryb2tlLXdpZHRoPSIxLjYiIHJ4PSI3LjciIHJ5PSIxMC4zIi8+PHRleHQgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeD0iMTEiIHk9IjQ0IiBmaWxsPSIjZTZlN2EyIiBzdHJva2Utd2lkdGg9Ii4zIiBmb250LWZhbWlseT0iUGFyY2htZW50IiBmb250LXNpemU9IjYwLjIiIHN0eWxlPSJsaW5lLWhlaWdodDowOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246UGFyY2htZW50Ij48dHNwYW4geD0iMTEiIHk9IjQ0Ij5SPC90c3Bhbj48L3RleHQ+PC9nPjwvc3ZnPg==');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #FFFFFF;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            -webkit-font-smoothing: subpixel-antialiased;
+            font-smoothing: subpixel-antialiased;
+        }
+
+        #main-container {
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .emscripten {
+            padding: 0;
+            margin: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            background-color: #00000000;
+        }
+
+        canvas.emscripten {
+            border: 0px none;
+            background: transparent;
+            background-color: #00000000;
+        }
+
+        #description {
+            margin: 10px;
+            padding: 10px;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="description" align="center">
+            <h2>DigiPen Korea RTIS</h2>
+
+            <div id="container_status" align="center">
+                Loading - please wait ..
+            </div>
+        </div>
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+    </div>
+
+    <script type='text/javascript'>
+        var isInitialized = false;
+        var failedToInitialize = false;
+
+        function updateWindowSize() {
+            var w = window,
+                d = document,
+                e = d.documentElement,
+                g = d.getElementsByTagName('body')[0],
+                x = w.innerWidth || e.clientWidth || g.clientWidth,
+                y = w.innerHeight || e.clientHeight || g.clientHeight;
+            Module.setWindowSize(x, y);
+        }
+
+        window.setInterval(function () {
+            if (isInitialized == false) return;
+
+            updateWindowSize();
+
+        }, 500);
+
+        function onkeydown(event) {
+            if (event.ctrlKey ||
+                (event.keyCode >= 112 && event.keyCode <= 123)) {
+                event.stopImmediatePropagation();
+                return;
+            }
+
+            if (event.keyCode == 8 || // Backspace
+                event.keyCode == 9 || // Tab
+                event.keyCode == 46 || // Delete
+                (event.keyCode >= 37 && event.keyCode <= 40)) { // Arrow keys
+                event.preventDefault();
+            }
+        }
+
+        function init() {
+            document.getElementById('container_status').innerHTML = "WebAssembly module initialized successfully!"
+            document.getElementById('container_status').style.color = "#00ff00";
+
+            window.addEventListener('keydown', onkeydown, true);
+            // This enables our app to get keyboard focus when displayed through an iframe
+            // https://supernapie.com/blog/keyboard-focus-in-an-iframe/
+            window.addEventListener('load', function () {
+                window.focus();
+                document.body.addEventListener('click', function (e) {
+                    window.focus();
+                }, false);
+            });
+
+            if (isInitialized == false) {
+                updateWindowSize();
+                isInitialized = true;
+            }
+            {
+                var status = document.getElementById("description");
+                status.hidden = true;
+            }
+        }
+
+        function getQueryParam(parameterName) {
+            const queryParams = new URLSearchParams(window.location.search);
+            return queryParams.get(parameterName);
+        }
+
+        function buildCommandLineArguments() {
+            var param = getQueryParam('start')
+            if (param)
+                return ['--start', param]
+            return []
+        }
+
+        var Module = {
+            arguments: buildCommandLineArguments(),
+            preRun: [(function () { })],
+            postRun: [(function () {
+                if (failedToInitialize) return;
+                init();
+            })],
+            canvas: (function () {
+                var canvas = document.getElementById('canvas');
+                canvas.addEventListener("webglcontextlost", function (e) {
+                    alert('WebGL context lost. You will need to reload the page.'); e.preventDefault();
+                }, false);
+                return canvas;
+            })(),
+            print: function (text) {
+                text = Array.prototype.slice.call(arguments).join(' ');
+                console.log(text);
+            },
+            printErr: function (text) {
+                text = Array.prototype.slice.call(arguments).join(' ');
+                console.error(text);
+            },
+            setStatus: function (text) {
+                if (text) {
+                    console.log("html module status: " + text);
+                }
+            }
+        };
+
+        window.onerror = function (event) {
+            failedToInitialize = true;
+            let reason = JSON.stringify(event);
+            console.log("onerror: " + reason);
+            document.getElementById('container_status').innerHTML = reason;
+            document.getElementById('container_status').innerHTML += '<br>This browser is not supported. Please try a different browser';
+            document.getElementById('container_status').style.color = "#ff0000";
+        };
+    </script>
+
+    {{{ SCRIPT }}}
+</body>
+
+</html>
