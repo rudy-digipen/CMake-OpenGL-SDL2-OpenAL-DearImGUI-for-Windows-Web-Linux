@@ -1,3 +1,5 @@
+# Note assumes SDL2.cmake has already defined the cs250_sdl2 target
+
 FetchContent_Declare(
     dearimgui
     GIT_REPOSITORY https://github.com/ocornut/imgui.git

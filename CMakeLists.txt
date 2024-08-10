@@ -3,7 +3,14 @@ cmake_minimum_required(VERSION 3.21)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-project(programming_fun_too)
+# #  Helper to print out all environment variables
+# get_cmake_property(_variableNames VARIABLES)
+# list (SORT _variableNames)
+# foreach (_variableName ${_variableNames})
+#     message(STATUS "${_variableName}=${${_variableName}}")
+# endforeach()
+
+project(programming_fun)
 
 include(cmake/StandardProjectSettings.cmake)
 
@@ -15,3 +22,4 @@ set_project_warnings(project_options)
 include(cmake/Dependencies.cmake)
 
 add_subdirectory(source)
+
