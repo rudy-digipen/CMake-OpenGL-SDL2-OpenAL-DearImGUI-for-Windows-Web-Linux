@@ -2,91 +2,107 @@
 
 ## Windows OS Setup
 
-Make sure you have installed 
+Install the following tools:
 
-1. [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-	- Make sure C++ related packages are selected during the installation
-2. [CMake](https://cmake.org/download/)
-	- Make sure it is available on the command line / PATH if given the option during installation
-3. [Git SCM](https://git-scm.com/downloads)
-	- Make sure it is available on the command line / PATH if given the option during installation
-
+1. [**Visual Studio**](https://visualstudio.microsoft.com/downloads/)
+   - Select C++-related packages during installation.
+2. [**CMake**](https://cmake.org/download/)
+   - Ensure it is available on the command line (`PATH`) if prompted.
+3. [**Git SCM**](https://git-scm.com/downloads)
+   - Ensure it is available on the command line (`PATH`) if prompted.
+4. [**Ninja Build**](https://github.com/ninja-build/ninja/releases)
+   - Manually add it to the command line (`PATH`).
 
 ## Web / Emscripten Setup
 
-Note it is highly recommended that you should **not use the windows version of emscripten**. Because of line ending differences, the generated output files will most likely not work once they are uploaded to a web server. To avoid this issue, use Emscripten on a Linux based OS like Ubuntu or MacOS.
+### Important Notice
 
-1. Read through their [Platform-specific notes](https://emscripten.org/docs/getting_started/downloads.html#platform-notes-installation-instructions-sdk) to see if you need to do anything for your platforms, like install python3.
+**Do not use the Windows version of Emscripten for production.** Due to line-ending differences, generated output files may not work properly when uploaded to a web server. Instead, use Emscripten on a Linux-based OS such as macOS or Ubuntu (_[WSL](https://learn.microsoft.com/en-us/windows/wsl/install) works too_).
 
-2. Go to your home director _( the `~` folder)_
+### Installation Steps
+
+1. Review [Emscripten Platform-Specific Notes](https://emscripten.org/docs/getting_started/downloads.html#platform-notes-installation-instructions-sdk) for any prerequisites, such as Python 3.
+2. Open a terminal and run:
+
+   ```sh
+   # Clone the emsdk repository
+   git clone https://github.com/emscripten-core/emsdk.git
+
+   # Navigate to the directory
+   cd emsdk
+
+   # Fetch the latest version of the SDK (if needed)
+   git pull
+
+   # Install the SDK tools
+   ./emsdk install 3.1.59
+
+   # Activate this version for the current user
+   ./emsdk activate 3.1.59
+
+   # Set environment variables for the current terminal session
+   source ./emsdk_env.sh
+   ```
+
+### Emscripten Setup on Windows
+
+If your main development platform is Windows, you should use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) for creating `Release` builds.
+
+However, for debugging with breakpoints, `WSL` may not work reliably. In this case, install the Windows version of Emscripten in your **User** directory (e.g., `C:/Users/<your-username>`). Follow these steps:
 
 ```sh
-cd ~
+# Navigate to your User directory
+cd %USERPROFILE%
 
-# Get the emsdk repo
+# Clone the emsdk repository
 git clone https://github.com/emscripten-core/emsdk.git
 
-# Enter that directory
+# Navigate to the directory
 cd emsdk
 
-# Fetch the latest version of the emsdk (not needed the first time you clone)
-git pull
+# Install the SDK tools
+emsdk install 3.1.59
 
-# Download and install the SDK tools.
-./emsdk install 3.1.59
-
-# Make this version active" for the current user. (writes .emscripten file)
-./emsdk activate 3.1.59
-
-# Activate PATH and other environment variables in the current terminal
-source ./emsdk_env.sh
+# Activate this version
+emsdk activate 3.1.59
 ```
+
+For more details on debugging, see [Web Debugging](DebuggingWeb.md).
 
 ## Ubuntu / Debian OS Setup
 
-#### Install required tools
+### Install Required Tools
 
-You will need **GNU** and related development tools, like **make** and **git**. 
+You need **GNU development tools** such as `make`, `git`, and other dependencies:
 
 ```sh
-sudo apt install build-essential git cmake libsdl2-dev libglew-dev libopenal-dev
+sudo apt install build-essential git cmake ninja-build libsdl2-dev libglew-dev libopenal-dev
 ```
 
-## Mac OS Setup
+## macOS Setup
 
-### Install Xcode:
+### Install Xcode
 
-Xcode is the integrated development environment (IDE) for macOS. It includes the necessary tools and compilers for C++ development.
+Xcode is the integrated development environment (IDE) for macOS and includes necessary C++ tools.
 
-1. Open the App Store on your Mac.
-2. Search for "Xcode" and install it.
-3. Launch Xcode once the installation is complete to complete the setup process.
-4. Open Terminal (you can find it in Applications > Utilities or use Spotlight).
-5. Run the following command to install Command Line Tools:
-   
-   ```bash
+1. Open the **App Store** and search for "Xcode" to install it.
+2. Launch Xcode after installation to complete the setup.
+3. Open **Terminal** (Applications > Utilities or use Spotlight Search).
+4. Run the following command to install Command Line Tools:
+
+   ```sh
    xcode-select --install
    ```
-6. Follow the on-screen instructions to complete the installation.
+5. Follow the on-screen instructions.
 
-### Install Dev Tools & Libraries
+### Install Development Tools & Libraries
 
 1. **Install Homebrew** (if not already installed):
-
-   Homebrew is a popular package manager for macOS. It simplifies the process of installing various software packages, including CMake.
-
-   Checkout how to install it here [https://brew.sh](https://brew.sh)
+   - Visit [Homebrew's website](https://brew.sh) and follow the installation instructions.
 
 2. **Install CMake, SDL2, and GLEW using Homebrew**:
-
-   With Homebrew installed, you can easily install CMake and our other dependencies from the terminal:
-
-   ```bash
-   brew install cmake sdl2 glew openal-soft
+   ```sh
+   brew install cmake ninja sdl2 glew openal-soft
    ```
 
-   Homebrew will download and install the latest versions for you.
-
-
-
-
+This will install the required development tools and dependencies automatically.

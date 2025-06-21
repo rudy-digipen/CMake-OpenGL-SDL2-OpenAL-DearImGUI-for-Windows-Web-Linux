@@ -123,6 +123,10 @@ EMSCRIPTEN_BINDINGS(main_window)
 int main([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 try
 {
+
+#if defined(DEVELOPER_VERSION)
+    std::cout << "Developer Build\n";
+#endif
     Application application;
 #if !defined(__EMSCRIPTEN__)
     while (!application.IsDone())

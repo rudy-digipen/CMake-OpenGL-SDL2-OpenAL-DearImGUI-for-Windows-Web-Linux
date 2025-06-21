@@ -10,8 +10,11 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE_CODE})
 target_link_libraries(fun PRIVATE project_options dependencies)
 target_include_directories(fun PRIVATE .)
 
-set(IS_DEVELOPER_VERSION $<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>)
-target_compile_definitions(fun PRIVATE $<$<BOOL:${IS_DEVELOPER_VERSION}>:DEVELOPER_VERSION>)
+# Check the DEVELOPER_VERSION_MACRO cache variable
+# This is set by the cmake configure preset
+if (DEVELOPER_VERSION_MACRO)
+    target_compile_definitions(fun PRIVATE DEVELOPER_VERSION)
+endif()
 
 if(EMSCRIPTEN)
 
@@ -43,7 +46,7 @@ if(EMSCRIPTEN)
 elseif(WIN32)
 
     target_link_options(fun PRIVATE 
-        $<IF:$<BOOL:${IS_DEVELOPER_VERSION}>,/SUBSYSTEM:CONSOLE,/SUBSYSTEM:WINDOWS>
+        $<IF:$<BOOL:${DEVELOPER_VERSION_MACRO}>,/SUBSYSTEM:CONSOLE,/SUBSYSTEM:WINDOWS>
         /ENTRY:mainCRTStartup)
 
     set(ICON_RC ${CMAKE_CURRENT_BINARY_DIR}/app.rc)

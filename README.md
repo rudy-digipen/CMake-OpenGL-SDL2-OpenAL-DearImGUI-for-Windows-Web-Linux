@@ -14,11 +14,13 @@ First Setup your [Development Environment](docs/DevEnvironment.md)
 cmake --preset windows-debug
 cmake --preset windows-developer-release
 cmake --preset windows-release
+cmake --preset web-debug-on-windows
 
 # Build exe
 cmake --build --preset windows-debug
 cmake --build --preset windows-developer-release
 cmake --build --preset windows-release
+cmake --build --preset web-debug-on-windows
 ```
 
 **Linux**
