@@ -13,7 +13,7 @@ if(EMSCRIPTEN)
     # https://emscripten.org/docs/porting/multimedia_and_graphics/OpenGL-support.html
     
     target_link_options(the_opengl INTERFACE -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2)
-    target_compile_definitions(the_opengl INTERFACE IS_WEBGL)
+    target_compile_definitions(the_opengl INTERFACE IS_WEBGL2)
 
 endif()
 
