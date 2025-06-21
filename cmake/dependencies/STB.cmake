@@ -1,8 +1,8 @@
 FetchContent_Declare(
     stb_github
     GIT_REPOSITORY https://github.com/nothings/stb.git
-    GIT_TAG master
-    GIT_SHALLOW TRUE
+    # latest of master branch as of 2/24/2025
+    GIT_TAG 5c205738c191bcb0abc65c4febfa9bd25ff35234
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
 )
