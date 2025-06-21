@@ -202,7 +202,7 @@ void Application::setupSDLWindow(gsl::czstring title)
         throw_error_message("Failed to init SDK error: ", SDL_GetError());
     }
 
-#if defined(IS_WEBGL)
+#if defined(IS_WEBGL2)
     hint_gl(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
     hint_gl(SDL_GL_CONTEXT_MINOR_VERSION, 0);
     hint_gl(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_ES);
@@ -505,7 +505,7 @@ void Demo::ImGuiDraw()
     {
         ImGui::Text("handle = %d", example_image.handle);
         ImGui::Text("size = %d x %d", example_image.width, example_image.height);
-        ImGui::Image(reinterpret_cast<void*>(static_cast<intptr_t>(example_image.handle)), ImVec2(static_cast<float>(example_image.width), static_cast<float>(example_image.height)));
+        ImGui::Image(static_cast<ImTextureID>(example_image.handle), ImVec2(static_cast<float>(example_image.width), static_cast<float>(example_image.height)));
     }
     else
     {
