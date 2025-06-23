@@ -4,8 +4,6 @@ FetchContent_Declare(
     URL https://github.com/g-truc/glm/releases/download/1.0.1/glm-1.0.1-light.7z
     URL_HASH MD5=6db43fc749c8acdc8ccb9815b1a57f62
     SOURCE_DIR _deps/the_glm-src/glm
-    CONFIGURE_COMMAND ""
-    BUILD_COMMAND ""
 )
 FetchContent_MakeAvailable(glm)
 

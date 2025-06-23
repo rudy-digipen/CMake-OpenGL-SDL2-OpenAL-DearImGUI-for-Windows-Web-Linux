@@ -20,8 +20,6 @@ elseif(WIN32)
         glew
         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL "https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0-win32.zip"
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
     )
     FetchContent_MakeAvailable(glew)
 

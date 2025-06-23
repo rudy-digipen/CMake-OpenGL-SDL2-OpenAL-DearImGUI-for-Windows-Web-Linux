@@ -7,8 +7,6 @@ if(WIN32)
         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL "https://github.com/kcat/openal-soft/releases/download/1.24.3/openal-soft-1.24.3-bin.zip"
         URL_HASH MD5=2e035d4dac29da6d9481fe68e3af881a
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
     )
     FetchContent_MakeAvailable(openalsoft)
 

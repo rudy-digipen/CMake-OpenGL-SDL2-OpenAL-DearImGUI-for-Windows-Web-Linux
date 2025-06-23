@@ -4,8 +4,6 @@ FetchContent_Declare(
     dearimgui
     GIT_REPOSITORY https://github.com/ocornut/imgui.git
     GIT_TAG afd659bb926c94f32928ec586205e27075e93c92 # latest from docking branch as of 2/19/2025
-    CONFIGURE_COMMAND ""
-    BUILD_COMMAND ""
 )
 FetchContent_MakeAvailable(dearimgui)
 

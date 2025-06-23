@@ -13,8 +13,6 @@ if(WIN32)
         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.0/SDL2-devel-2.32.0-VC.zip
         URL_HASH MD5=87935fd6a504e71e039482a42db8c140
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
     )
     FetchContent_MakeAvailable(sdl2)
 

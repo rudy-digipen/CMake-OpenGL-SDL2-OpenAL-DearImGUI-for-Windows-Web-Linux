@@ -3,8 +3,6 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/nothings/stb.git
     # latest of master branch as of 2/24/2025
     GIT_TAG 5c205738c191bcb0abc65c4febfa9bd25ff35234
-    CONFIGURE_COMMAND ""
-    BUILD_COMMAND ""
 )
 
 FetchContent_MakeAvailable(stb_github)
