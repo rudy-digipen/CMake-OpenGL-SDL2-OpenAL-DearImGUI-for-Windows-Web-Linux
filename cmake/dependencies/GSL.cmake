@@ -1,8 +1,8 @@
 FetchContent_Declare(
     gsl
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-    URL https://github.com/microsoft/GSL/archive/refs/tags/v4.1.0.tar.gz
-    URL_HASH MD5=7e6883a254e73a8b2368a0d26efe68a7
+    URL https://github.com/microsoft/GSL/archive/refs/tags/v4.2.0.tar.gz
+    URL_HASH MD5=5f3d2f7ef9c6351503c0c8f1f9390144
 )
 FetchContent_MakeAvailable(gsl)
 
