@@ -1,8 +1,8 @@
 FetchContent_Declare(
     stb_github
     GIT_REPOSITORY https://github.com/nothings/stb.git
-    # latest of master branch as of 2/24/2025
-    GIT_TAG 5c205738c191bcb0abc65c4febfa9bd25ff35234
+    # latest of master branch as of 8/22/2025
+    GIT_TAG f58f558c120e9b32c217290b80bad1a0729fbb2c
 )
 
 FetchContent_MakeAvailable(stb_github)
