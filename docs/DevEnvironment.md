@@ -24,7 +24,7 @@ Install the following tools:
 1. Review [Emscripten Platform-Specific Notes](https://emscripten.org/docs/getting_started/downloads.html#platform-notes-installation-instructions-sdk) for any prerequisites, such as Python 3.
 2. Open a terminal and run:
 
-   ```sh
+```sh
    # Clone the emsdk repository
    git clone https://github.com/emscripten-core/emsdk.git
 
@@ -35,14 +35,14 @@ Install the following tools:
    git pull
 
    # Install the SDK tools
-   ./emsdk install 3.1.59
+   ./emsdk install 4.0.13
 
    # Activate this version for the current user
-   ./emsdk activate 3.1.59
+   ./emsdk activate 4.0.13
 
    # Set environment variables for the current terminal session
    source ./emsdk_env.sh
-   ```
+```
 
 ### Emscripten Setup on Windows
 
@@ -61,10 +61,10 @@ git clone https://github.com/emscripten-core/emsdk.git
 cd emsdk
 
 # Install the SDK tools
-emsdk install 3.1.59
+emsdk install 4.0.13
 
 # Activate this version
-emsdk activate 3.1.59
+emsdk activate 4.0.13
 ```
 
 For more details on debugging, see [Web Debugging](DebuggingWeb.md).
