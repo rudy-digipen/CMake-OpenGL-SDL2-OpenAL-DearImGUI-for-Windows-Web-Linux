@@ -1,9 +1,10 @@
 include(FetchContent)
 set(FETCHCONTENT_QUIET TRUE)
 set(CMAKE_VERBOSE_MAKEFILE OFF)
-if (CMAKE_VERSION VERSION_GREATER "3.24.0")
-    # Avoid warnings in CMake 3.24.0:
-    cmake_policy(SET CMP0135 NEW)
+
+# https://cmake.org/cmake/help/latest/policy/CMP0135.html
+if(POLICY CMP0135)
+  cmake_policy(SET CMP0135 NEW)
 endif()
 
 # Set a default build type if none was specified
