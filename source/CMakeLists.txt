@@ -10,9 +10,9 @@ source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCE_CODE})
 target_link_libraries(fun PRIVATE project_options dependencies)
 target_include_directories(fun PRIVATE .)
 
-# Check the DEVELOPER_VERSION_MACRO cache variable
+# Check the IS_DEVELOPER_VERSION cache variable
 # This is set by the cmake configure preset
-if (DEVELOPER_VERSION_MACRO)
+if (IS_DEVELOPER_VERSION)
     target_compile_definitions(fun PRIVATE DEVELOPER_VERSION)
 endif()
 
@@ -30,7 +30,7 @@ if(EMSCRIPTEN)
     # -lembind                      - to call c++ from javascript https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html
     # --shell-file                  - to customize the webpage https://emscripten.org/docs/compiling/Deploying-Pages.html#build-files-and-custom-shell
     target_link_options(fun PRIVATE 
-    -sASSERTIONS=1
+    -sASSERTIONS=$<$<BOOL:${IS_DEVELOPER_VERSION}>:1>$<$<NOT:$<BOOL:${IS_DEVELOPER_VERSION}>>:0>
     -sWASM=1 
     -sDISABLE_EXCEPTION_CATCHING=0 
     -sALLOW_MEMORY_GROWTH=1 
@@ -46,7 +46,7 @@ if(EMSCRIPTEN)
 elseif(WIN32)
 
     target_link_options(fun PRIVATE 
-        $<IF:$<BOOL:${DEVELOPER_VERSION_MACRO}>,/SUBSYSTEM:CONSOLE,/SUBSYSTEM:WINDOWS>
+        $<IF:$<BOOL:${IS_DEVELOPER_VERSION}>,/SUBSYSTEM:CONSOLE,/SUBSYSTEM:WINDOWS>
         /ENTRY:mainCRTStartup)
 
     set(ICON_RC ${CMAKE_CURRENT_BINARY_DIR}/app.rc)
