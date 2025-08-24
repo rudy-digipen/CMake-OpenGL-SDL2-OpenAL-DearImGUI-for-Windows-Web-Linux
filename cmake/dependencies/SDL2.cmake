@@ -11,7 +11,7 @@ if(WIN32)
     FetchContent_Declare(
         sdl2
         DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-        UEL https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-devel-2.32.8-VC.zip
+        URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-devel-2.32.8-VC.zip
         URL_HASH MD5=13172db35a91f3baac59e47187a2ebbb
     )
     FetchContent_MakeAvailable(sdl2)
