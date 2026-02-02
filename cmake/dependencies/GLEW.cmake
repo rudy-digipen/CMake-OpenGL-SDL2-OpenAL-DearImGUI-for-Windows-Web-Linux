@@ -16,10 +16,10 @@ if(NOT WIN32 AND NOT EMSCRIPTEN)
     target_include_directories(the_glew SYSTEM INTERFACE ${GLEW_INCLUDE_DIRS})
 elseif(WIN32)
     # download binaries for GLEW for windows x64
-    FetchContent_Declare(
+    CachedFetchContent_Declare(
         glew
-        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL "https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0-win32.zip"
+        URL_HASH MD5=1feddfe8696c192fa46a0df8eac7d4bf
     )
     FetchContent_MakeAvailable(glew)
 

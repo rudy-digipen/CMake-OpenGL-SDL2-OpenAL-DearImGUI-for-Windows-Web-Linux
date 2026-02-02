@@ -2,9 +2,8 @@ add_library(the_openal INTERFACE)
 
 if(WIN32)
 # download binaries from OpenAL Soft for windows x64
-    FetchContent_Declare(
+    CachedFetchContent_Declare(
         openalsoft
-        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL "https://github.com/kcat/openal-soft/releases/download/1.24.3/openal-soft-1.24.3-bin.zip"
         URL_HASH MD5=2e035d4dac29da6d9481fe68e3af881a
     )

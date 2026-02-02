@@ -8,9 +8,8 @@ add_library(the_sdl2 INTERFACE)
 
 if(WIN32)
     # download binaries for SDL2 for windows x64
-    FetchContent_Declare(
+    CachedFetchContent_Declare(
         sdl2
-        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
         URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-devel-2.32.8-VC.zip
         URL_HASH MD5=13172db35a91f3baac59e47187a2ebbb
     )

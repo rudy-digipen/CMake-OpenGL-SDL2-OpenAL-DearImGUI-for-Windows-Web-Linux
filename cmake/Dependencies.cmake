@@ -1,4 +1,5 @@
 include(FetchContent)
+include(cmake/CachedFetchContent.cmake)
 
 include(cmake/dependencies/OpenGL.cmake)    #defines target the_opengl
 include(cmake/dependencies/GLEW.cmake)      # defines target the_glew

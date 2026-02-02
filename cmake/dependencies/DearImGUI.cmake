@@ -1,9 +1,9 @@
 # Depends on SDL2 and OpenGL
 
-FetchContent_Declare(
+CachedFetchContent_Declare(
     dearimgui
-    GIT_REPOSITORY https://github.com/ocornut/imgui.git
-    GIT_TAG a28cb615ff2c2ed8901397b00762d557cae24760 # latest from docking branch as of 8/22/2025
+    URL https://github.com/ocornut/imgui/archive/refs/tags/v1.92.3-docking.tar.gz
+    URL_HASH MD5=3f7c5bb4e34e4fa9143baac62efbc883
 )
 FetchContent_MakeAvailable(dearimgui)
 
