@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 include(FetchContent)
 include(cmake/CachedFetchContent.cmake)
 

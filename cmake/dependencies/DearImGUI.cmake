@@ -1,9 +1,13 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 # Depends on SDL2 and OpenGL
 
 CachedFetchContent_Declare(
     dearimgui
-    URL https://github.com/ocornut/imgui/archive/refs/tags/v1.92.3-docking.tar.gz
-    URL_HASH MD5=3f7c5bb4e34e4fa9143baac62efbc883
+    URL https://github.com/ocornut/imgui/archive/refs/tags/v1.92.5-docking.tar.gz
+    URL_HASH SHA256=c816c20e8c75f3e15ae867350e79925502d1a6a85938bb1a73b8927e5f31f9cb
 )
 FetchContent_MakeAvailable(dearimgui)
 

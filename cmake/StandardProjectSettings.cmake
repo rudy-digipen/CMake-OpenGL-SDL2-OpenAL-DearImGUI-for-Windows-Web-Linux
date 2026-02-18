@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 include(FetchContent)
 set(FETCHCONTENT_BASE_DIR "${CMAKE_SOURCE_DIR}/build/_deps_${CMAKE_HOST_SYSTEM_NAME}")
 set(FETCHCONTENT_QUIET TRUE)

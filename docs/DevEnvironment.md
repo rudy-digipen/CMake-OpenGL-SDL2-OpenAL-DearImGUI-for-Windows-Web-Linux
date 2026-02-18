@@ -25,6 +25,9 @@ Install the following tools:
 2. Open a terminal and run:
 
 ```sh
+    # Got to Home Directory
+    cd ~
+
    # Clone the emsdk repository
    git clone https://github.com/emscripten-core/emsdk.git
 
@@ -35,13 +38,10 @@ Install the following tools:
    git pull
 
    # Install the SDK tools
-   ./emsdk install 4.0.13
+   ./emsdk install 5.0.0
 
    # Activate this version for the current user
-   ./emsdk activate 4.0.13
-
-   # Set environment variables for the current terminal session
-   source ./emsdk_env.sh
+   ./emsdk activate 5.0.0
 ```
 
 ### Emscripten Setup on Windows
@@ -61,10 +61,10 @@ git clone https://github.com/emscripten-core/emsdk.git
 cd emsdk
 
 # Install the SDK tools
-emsdk install 4.0.13
+emsdk install 5.0.0
 
 # Activate this version
-emsdk activate 4.0.13
+emsdk activate 5.0.0
 ```
 
 For more details on debugging, see [Web Debugging](DebuggingWeb.md).

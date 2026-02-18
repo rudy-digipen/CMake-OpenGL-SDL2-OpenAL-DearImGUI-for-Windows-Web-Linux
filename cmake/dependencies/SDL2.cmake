@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 # We will be using SDL2 for windowing & gl context creation
 # Linux platforms have a very easy way to install these depenencies and expose them to compilers so,
 #   we will use the builtin find_package
@@ -10,8 +14,8 @@ if(WIN32)
     # download binaries for SDL2 for windows x64
     CachedFetchContent_Declare(
         sdl2
-        URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-devel-2.32.8-VC.zip
-        URL_HASH MD5=13172db35a91f3baac59e47187a2ebbb
+        URL https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip
+        URL_HASH SHA256=af347939395a58b365846aaea27391e69f9ec9d4dd650d6ac40802159b418a6e
     )
     FetchContent_MakeAvailable(sdl2)
 

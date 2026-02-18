@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 # We will use GLEW for OpenGL bindings
 # Linux platforms have a very easy way to install these depenencies and expose them to compilers so,
 #   we will use the builtin find_package
@@ -18,8 +22,8 @@ elseif(WIN32)
     # download binaries for GLEW for windows x64
     CachedFetchContent_Declare(
         glew
-        URL "https://github.com/nigels-com/glew/releases/download/glew-2.2.0/glew-2.2.0-win32.zip"
-        URL_HASH MD5=1feddfe8696c192fa46a0df8eac7d4bf
+        URL "https://github.com/nigels-com/glew/releases/download/glew-2.3.1/glew-2.3.1-win32.zip"
+        URL_HASH SHA256=3792b7bb563d2870ce08491fd3f1147f2fe6a27a43076df475eea7c2b853fd0f
     )
     FetchContent_MakeAvailable(glew)
 

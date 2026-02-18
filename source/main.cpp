@@ -2,7 +2,7 @@
  * \file
  * \author Rudy Castan
  * \date 2024 Fall
- * \copyright DigiPen Institute of Technology
+ * \copyright CC0 1.0 Universal
  */
 
 #include <GL/glew.h>

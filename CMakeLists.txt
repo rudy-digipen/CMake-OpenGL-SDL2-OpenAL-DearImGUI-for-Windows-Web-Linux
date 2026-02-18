@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 cmake_minimum_required(VERSION 3.21)
 
 set(CMAKE_CXX_STANDARD 20)

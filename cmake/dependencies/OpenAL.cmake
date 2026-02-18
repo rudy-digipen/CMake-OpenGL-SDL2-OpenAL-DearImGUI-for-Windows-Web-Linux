@@ -1,11 +1,15 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 add_library(the_openal INTERFACE)
 
 if(WIN32)
 # download binaries from OpenAL Soft for windows x64
     CachedFetchContent_Declare(
         openalsoft
-        URL "https://github.com/kcat/openal-soft/releases/download/1.24.3/openal-soft-1.24.3-bin.zip"
-        URL_HASH MD5=2e035d4dac29da6d9481fe68e3af881a
+        URL "https://github.com/kcat/openal-soft/releases/download/1.25.1/openal-soft-1.25.1-bin.zip"
+        URL_HASH SHA256=0915af01928b17e46f7c59ffc44a7413486bbef8424a3465109f489a80cb68a2
     )
     FetchContent_MakeAvailable(openalsoft)
 

@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(SOURCE_CODE 
@@ -12,9 +16,7 @@ target_include_directories(fun PRIVATE .)
 
 # Check the IS_DEVELOPER_VERSION cache variable
 # This is set by the cmake configure preset
-if (IS_DEVELOPER_VERSION)
-    target_compile_definitions(fun PRIVATE DEVELOPER_VERSION)
-endif()
+target_compile_definitions(fun PRIVATE $<$<BOOL:${IS_DEVELOPER_VERSION}>:DEVELOPER_VERSION>)
 
 if(EMSCRIPTEN)
 

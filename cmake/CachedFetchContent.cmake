@@ -1,4 +1,7 @@
-# CachedFetchContent.cmake
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 # Provides caching functionality for FetchContent URL downloads
 # Downloads are cached in OS-appropriate locations and reused across builds
 

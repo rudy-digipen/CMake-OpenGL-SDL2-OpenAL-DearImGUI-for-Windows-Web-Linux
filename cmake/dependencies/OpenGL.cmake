@@ -1,3 +1,7 @@
+# author Rudy Castan
+# date 2026 Spring
+# copyright CC0 1.0 Universal
+
 # most platforms should have OpenGL already available
 # debian linux : libgl1-mesa-dev (not that installing GLEW installs this as a dependency)
 find_package(OpenGL REQUIRED)
